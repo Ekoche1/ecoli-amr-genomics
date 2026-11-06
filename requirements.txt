@@ -1,0 +1,6 @@
+# Python 3.12. Install with: pip install -r requirements.txt
+# AMRFinderPlus (needed only for the full rerun) is installed separately: see scripts/README.md
+pandas==3.0.6
+numpy==2.5.4
+biopython==1.88
+matplotlib==3.11.2

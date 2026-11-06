@@ -1,0 +1,16 @@
+# Genomes and other large downloads are not stored in the repository.
+# Scripts download them into these folders when you run the full workflow.
+genomes/
+reference_genomes/
+downloads/
+amrfinder_output/
+# intermediate files written by the quality-check and gene-calling scripts
+work/
+
+# Python and system clutter
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db

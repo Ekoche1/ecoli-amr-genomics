@@ -1,0 +1,49 @@
+{
+ "seed": 20261018,
+ "bootstrap_replicates": 10000,
+ "validations": [
+  {
+   "name": "V1 genotype table covers exactly the 749 retained genomes",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V2 rule-state counts as expected",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V3 S10 tables share the genome set and differ from the main calls only as expected",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V4 lab records matched = 724",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V5 CAZ missing 14, intermediate 66, R 207, S 437",
+   "ok": true,
+   "detail": "{'S': 437, 'R': 207, 'I': 66, 'no_record': 25, 'missing': 14}"
+  },
+  {
+   "name": "V6 four-way common set is a subset of C(R1,R4); difference explained by G2-indeterminate isolates made positive by G3/G4",
+   "ok": true,
+   "detail": "C(R1,R4)=623, four-way=622, differing isolates=['G4']"
+  },
+  {
+   "name": "V7 nesting holds (no positive lost between successive/primary rules)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "inputs": {
+  "gene_calls_749.csv": "00f1ba02837e98981d8939f86c39fd393e09a85ee5b95a05d3f2d83731074f46",
+  "gene_calls_749_S10a.csv": "f23193d02797a2964afaf89c9a6547f25a2aa792027dda3f0e7f6f402c88d028",
+  "gene_calls_749_S10b.csv": "b1cf6c07b35c58df60e752daaca3ee1b7291f658314a84d7c751c2cf147c1bb9",
+  "meta_data_tidy.txt": "dd3ca8a8c0db415a1ec7269b8b31d12ca696d798b5cd6b47458b986e1b8055a9",
+  "genome_qc_762.csv": "4123344cdfe8350e46e42cdce92aa56ca84788e6120acf08db338289ad737647",
+  "near_identical_pairs.csv": "7403b9bf0dc1359a37b0392bb7442ab6404d6d3992aa840890f943b1ab5f05ea"
+ }
+}

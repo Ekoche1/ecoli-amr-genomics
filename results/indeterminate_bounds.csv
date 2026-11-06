@@ -1,0 +1,6 @@
+rule,analysable_R,analysable_S,indet_R,indet_S,sens_if_indet_missed,sens_determinate_only,sens_if_indet_detected,spec_if_indet_flagged,spec_determinate_only,spec_if_indet_negative
+R1,207,437,2,1,0.7874,0.7951,0.7971,0.9428,0.945,0.9451
+R2,207,437,5,15,0.8213,0.8416,0.8454,0.9108,0.9431,0.9451
+R3,207,437,4,15,0.8744,0.8916,0.8937,0.9062,0.9384,0.9405
+R4,207,437,5,16,0.8986,0.9208,0.9227,0.8558,0.8884,0.8924
+R5,207,437,5,16,0.9372,0.9604,0.9614,0.8535,0.886,0.8902

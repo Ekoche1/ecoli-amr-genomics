@@ -1,0 +1,103 @@
+PASS V1 genotype table covers exactly the 749 retained genomes
+PASS V2 rule-state counts as expected
+PASS V3 S10 tables share the genome set and differ from the main calls only as expected
+resampling units among 749 retained genomes: 653 (multi-genome clusters 44 holding 140 genomes; singletons 609); max cluster size 12; lowest within-cluster pair Jaccard 0.9900
+cluster size distribution: {2: 27, 3: 6, 4: 4, 5: 2, 7: 3, 9: 1, 12: 1}
+
+=== RECONCILIATION (primary set) ===
+genomes in primary set: 749 | with a phenotype record: 724 | without record: 25
+ceftazidime MIC category among the 749: {'S': 437, 'R': 207, 'I': 66, 'no_record': 25, 'missing': 14}
+PASS V4 lab records matched = 724
+PASS V5 CAZ missing 14, intermediate 66, R 207, S 437 | {'S': 437, 'R': 207, 'I': 66, 'no_record': 25, 'missing': 14}
+genotype_state rule   R  I   S  missing  no_record
+      POSITIVE   R1 163 30  24        3          5
+ INDETERMINATE   R1   2  0   1        0          0
+      NEGATIVE   R1  42 36 412       11         20
+      POSITIVE   R2 170 30  24        3          5
+ INDETERMINATE   R2   5  2  15        1          1
+      NEGATIVE   R2  32 34 398       10         19
+      POSITIVE   R3 181 32  26        4          5
+ INDETERMINATE   R3   4  2  15        1          1
+      NEGATIVE   R3  22 32 396        9         19
+      POSITIVE   R4 186 37  47        4          6
+ INDETERMINATE   R4   5  4  16        1          1
+      NEGATIVE   R4  16 25 374        9         18
+      POSITIVE   R5 194 39  48        4          6
+ INDETERMINATE   R5   5  4  16        1          1
+      NEGATIVE   R5   8 23 373        9         18
+PASS V6 four-way common set is a subset of C(R1,R4); difference explained by G2-indeterminate isolates made positive by G3/G4 | C(R1,R4)=623, four-way=622, differing isolates=['G4']
+PASS V7 nesting holds (no positive lost between successive/primary rules)
+
+=== MEASURES ===
+                                   set rule  evaluable_n  evaluable_R  evaluable_S  TP  FN  FP  TN  indeterminate_with_phenotype  indet_R  indet_S
+                     own evaluable set   R1          641          205          436 163  42  24 412                             3        2        1
+                     own evaluable set   R2          624          202          422 170  32  24 398                            20        5       15
+                     own evaluable set   R3          625          203          422 181  22  26 396                            19        4       15
+                     own evaluable set   R4          623          202          421 186  16  47 374                            21        5       16
+                     own evaluable set   R5          623          202          421 194   8  48 373                            21        5       16
+                   common set C(R1,R4)   R1          623          202          421 163  39  24 397                             3        2        1
+                   common set C(R1,R4)   R4          623          202          421 186  16  47 374                            21        5       16
+common set, evaluable for all of R1-R4   R1          622          201          421 163  38  24 397                             3        2        1
+common set, evaluable for all of R1-R4   R2          622          201          421 170  31  24 397                            20        5       15
+common set, evaluable for all of R1-R4   R3          622          201          421 180  21  26 395                            19        4       15
+common set, evaluable for all of R1-R4   R4          622          201          421 185  16  47 374                            21        5       16
+                   common set C(R4,R5)   R4          622          201          421 186  15  47 374                            21        5       16
+                   common set C(R4,R5)   R5          622          201          421 193   8  48 373                            21        5       16
+own evaluable set      R1: sens 0.795 (Wilson 0.735-0.845; boot 0.725-0.854) | spec 0.945 (Wilson 0.919-0.963; boot 0.921-0.966) | PPV 0.872 NPV 0.907
+own evaluable set      R2: sens 0.842 (Wilson 0.785-0.885; boot 0.780-0.894) | spec 0.943 (Wilson 0.917-0.961; boot 0.918-0.964) | PPV 0.876 NPV 0.926
+own evaluable set      R3: sens 0.892 (Wilson 0.841-0.927; boot 0.839-0.936) | spec 0.938 (Wilson 0.911-0.958; boot 0.913-0.961) | PPV 0.874 NPV 0.947
+own evaluable set      R4: sens 0.921 (Wilson 0.875-0.951; boot 0.875-0.959) | spec 0.888 (Wilson 0.855-0.915; boot 0.850-0.923) | PPV 0.798 NPV 0.959
+own evaluable set      R5: sens 0.960 (Wilson 0.924-0.980; boot 0.930-0.985) | spec 0.886 (Wilson 0.852-0.913; boot 0.848-0.921) | PPV 0.802 NPV 0.979
+common set C(R1,R4)    R1: sens 0.807 (Wilson 0.747-0.855; boot 0.738-0.865) | spec 0.943 (Wilson 0.917-0.961; boot 0.918-0.964) | PPV 0.872 NPV 0.911
+common set C(R1,R4)    R4: sens 0.921 (Wilson 0.875-0.951; boot 0.875-0.959) | spec 0.888 (Wilson 0.855-0.915; boot 0.850-0.923) | PPV 0.798 NPV 0.959
+common set, evaluable for all of R1-R4 R1: sens 0.811 (Wilson 0.751-0.859; boot 0.743-0.868) | spec 0.943 (Wilson 0.917-0.961; boot 0.918-0.964) | PPV 0.872 NPV 0.913
+common set, evaluable for all of R1-R4 R2: sens 0.846 (Wilson 0.789-0.889; boot 0.785-0.898) | spec 0.943 (Wilson 0.917-0.961; boot 0.918-0.964) | PPV 0.876 NPV 0.928
+common set, evaluable for all of R1-R4 R3: sens 0.896 (Wilson 0.846-0.931; boot 0.844-0.940) | spec 0.938 (Wilson 0.911-0.958; boot 0.913-0.961) | PPV 0.874 NPV 0.950
+common set, evaluable for all of R1-R4 R4: sens 0.920 (Wilson 0.875-0.950; boot 0.874-0.959) | spec 0.888 (Wilson 0.855-0.915; boot 0.850-0.923) | PPV 0.797 NPV 0.959
+common set C(R4,R5)    R4: sens 0.925 (Wilson 0.881-0.954; boot 0.880-0.962) | spec 0.888 (Wilson 0.855-0.915; boot 0.850-0.923) | PPV 0.798 NPV 0.961
+common set C(R4,R5)    R5: sens 0.960 (Wilson 0.923-0.980; boot 0.929-0.985) | spec 0.886 (Wilson 0.852-0.913; boot 0.848-0.921) | PPV 0.801 NPV 0.979
+
+=== PAIRED CONTRASTS ===
+                                   0         1         2         3         4
+contrast                    R1 vs R4  R1 vs R2  R2 vs R3  R3 vs R4  R4 vs R5
+common_n                         623       624       624       623       622
+common_R                         202       202       202       202       201
+common_S                         421       422       422       421       421
+dropped_from_j_own_set            18        17         0         2         1
+dropped_from_k_own_set             0         0         1         0         1
+sens_j                        0.8069    0.8069    0.8416     0.896    0.9254
+sens_k                        0.9208    0.8416    0.8911    0.9208    0.9602
+d_sens_pp                    11.3861    3.4653    4.9505    2.4752    3.4826
+d_sens_boot_lo_pp             7.1429    1.0929    2.2026    0.5155    0.9615
+d_sens_boot_hi_pp            16.4181    6.3725    8.3333    4.9383    6.8182
+spec_j                         0.943    0.9431    0.9431    0.9382    0.8884
+spec_k                        0.8884    0.9431    0.9384    0.8884     0.886
+d_spec_pp                    -5.4632       0.0   -0.4739   -4.9881   -0.2375
+d_spec_boot_lo_pp            -8.7891       0.0   -1.2107   -8.2294   -0.7444
+d_spec_boot_hi_pp            -2.8168       0.0       0.0   -2.4155       0.0
+resistant_newly_detected          23         7        10         5         7
+susceptible_newly_flagged         23         0         2        21         1
+positives_lost                     0         0         0         0         0
+exact_mcnemar_p_sens_unadj       0.0    0.0156     0.002    0.0625    0.0156
+exact_mcnemar_p_spec_unadj       0.0       1.0       0.5       0.0       1.0
+Holm-adjusted exact McNemar p (sens) for [R1vR4, R1vR2, R2vR3, R3vR4]: [0.0, 0.03125, 0.00586, 0.0625]
+Holm-adjusted exact McNemar p (spec) for [R1vR4, R1vR2, R2vR3, R3vR4]: [0.0, 1.0, 1.0, 0.0]
+
+Second-seed check on C(R1,R4): {'R1': ((0.7389155719759168, 0.8663864942528735), (0.9183168316831684, 0.9647584848296828)), 'R4': ((0.8763440860215054, 0.958904109589041), (0.8505732314255243, 0.9230769230769231))}
+
+S10 moved genomes and their phenotype:
+          caz_mic_raw caz_category        R1        S10a_R1        R4        S10a_R4        R5        S10b_R5
+genome_id                                                                                                    
+E71                NA      missing  POSITIVE  INDETERMINATE  POSITIVE  INDETERMINATE  POSITIVE  INDETERMINATE
+H12                 8            R  POSITIVE  INDETERMINATE  POSITIVE  INDETERMINATE  POSITIVE  INDETERMINATE
+I76                 2            I  NEGATIVE       NEGATIVE  NEGATIVE       NEGATIVE  POSITIVE  INDETERMINATE
+
+clone-discordant isolates (retained):           caz_mic_raw caz_category        R1        R4
+genome_id                                             
+E4               0.25            S  POSITIVE  POSITIVE
+F62              0.25            S  NEGATIVE  NEGATIVE
+H79             0.125            S  NEGATIVE  NEGATIVE
+I12             0.125            S  POSITIVE  POSITIVE
+I81                16            R  POSITIVE  POSITIVE
+
+Validation summary: ALL PASS []
