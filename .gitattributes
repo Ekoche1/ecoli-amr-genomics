@@ -1,2 +1,8 @@
 # Shell scripts must keep Unix line endings to run on Linux/WSL
 *.sh text eol=lf
+
+# Data, results and figures are stored byte-for-byte (no line-ending conversion),
+# so every copy is identical to the original and its SHA-256 fingerprint matches on every computer
+data/** -text
+results/** -text
+figures/** -text

@@ -143,7 +143,7 @@ python scripts/18_summary_tables.py
 python scripts/19_make_figure.py
 ```
 
-The tables written to `results/` should match the ones already there, and the figure is redrawn in `figures/`.
+The tables written to `results/` should match the ones already there, and the figure is redrawn in `figures/`. On Linux and macOS, the rerun tables have the same content but different line endings, so Git may list them as changed.
 
 ### Full rerun (several hours)
 
